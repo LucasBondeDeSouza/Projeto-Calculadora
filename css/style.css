@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(240, 242, 245);
+}
+
+.container {
+    background: #111;
+    border-radius: 16px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 20px;
+    color: white;
+    text-align: end;
+    font-size: 40px;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    margin: 10px 0;
+    display: block;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button#limpar {
+    width: 66%;
+    color: red;
+}
+
+button#limpar:active {
+    color: rgb(240, 242, 245);
+    background-color: red;
+}
+
+button.numero {
+    width: 20%;
+    margin: 5px;
+}
+
+button.zero {
+   width: 43%;
+}
+
+button.numero, button.zero {
+    color: white;
+    background-color: #2f2f2f;
+}
+
+button.numero:active, button.zero:active {
+    color: rgb(240, 242, 245);
+    background-color: #1a1a1a;
+}
+
+button.operador {
+    width: 28%;
+    color: white;
+    background-color: #fa8231;
+}
+
+button.operador:active {
+    background-color: #fa8231cc;
+}
