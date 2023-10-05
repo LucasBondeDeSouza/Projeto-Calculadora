@@ -1,0 +1,34 @@
+@media screen and (max-width: 600px) {
+    input {
+        padding: 10px;
+        font-size: 30px;
+        margin: 5px 5px 5px 0;
+        width: 90%;
+    }
+
+    .botoes, .resultado, .container {
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+
+    button {
+        padding: 20px;
+        font-size: 25px;
+    }
+
+    button#limpar {
+        width: 59%;
+    }
+
+    button.numero {
+        width: 17%;
+    }
+
+    button.zero {
+        width: 38%;
+    }
+
+    button.operador {
+        width: 24%;
+    }
+}
