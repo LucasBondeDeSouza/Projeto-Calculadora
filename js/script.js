@@ -5,7 +5,7 @@ let ultimoCaracterOperador = false;
 function appendToResult(valor) {
     if (isOperador(valor)) {
         if (!ultimoCaracterOperador) {
-            expressao += valor;
+            expressao += ` ${substituirOperador(valor)} `;
             ultimoCaracterOperador = true;
         }
     } else {
@@ -14,6 +14,14 @@ function appendToResult(valor) {
     }
     
     resultadoElement.value = expressao;
+}
+
+function substituirOperador(operador) {
+    const substituicoes = {
+        '/': '÷',
+        '*': 'x'
+    };
+    return substituicoes[operador] || operador;
 }
 
 function isOperador(valor) {
@@ -28,6 +36,8 @@ function limpar() {
 
 function calcular() {
     try {
+        // Substituir de volta para a avaliação correta
+        expressao = expressao.replace(/÷/g, '/').replace(/x/g, '*');
         expressao = eval(expressao).toString();
         resultadoElement.value = expressao;
     } catch (error) {
